@@ -1,4 +1,4 @@
-package com.example.rest_api_test2.jtest;
+package com.example.rest_api_test2.ext;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -12,14 +12,14 @@ import java.util.List;
 public class TestObject {
     int id;
     String name;
-    List<String> likeList;
+    List<String> list;
 
     @Override
     public String toString() {
         return "TestObject{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
-                ", likeList=" + likeList +
+                ", likeList=" + list +
                 '}';
     }
 }
