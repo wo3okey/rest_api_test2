@@ -77,4 +77,25 @@ public class RestTemplateService {
 
         return resultMap;
     }
+
+    public Map<String, Object> getApi3(String url) {
+        Map<String, Object> resultMap = new TreeMap<>();
+        Map<String, Object> response = restTemplateApi.getObject2(url);
+        try {
+            List<TestObject> t = (List<TestObject>) response.get("objectList");
+            resultMap.put("test", t);
+        } catch (Exception e) {
+            log.info(e.getMessage());
+        }
+        return resultMap;
+    }
+
+    public Map<String, Object> getApi4(String url) {
+        Map<String, Object> resultMap = new TreeMap<>();
+        List<TestObject> response = restTemplateApi.getTestObject(url);
+
+        resultMap.put("list", response);
+
+        return resultMap;
+    }
 }
