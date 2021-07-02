@@ -2,7 +2,6 @@ package com.example.rest_api_test2.jtest;
 
 import com.example.rest_api_test2.ext.JsonConverter;
 import com.example.rest_api_test2.ext.TestObject;
-import com.google.gson.Gson;
 import lombok.extern.slf4j.Slf4j;
 
 import java.io.BufferedReader;
@@ -15,14 +14,13 @@ import java.util.stream.Collectors;
 
 @Slf4j
 public class HttpURLConnectionService {
-    Gson gson = new Gson();
+    private static final String URL = "http://localhost:8080/api1";
 
     public static void main(String[] args) throws Exception {
         HttpURLConnectionService httpTest = new HttpURLConnectionService();
 
         // http get
-        String url = "http://localhost:8080/api1";
-        String response = httpTest.get(url);
+        String response = httpTest.get(URL);
         log.info("response : {}", response);
 
         // get string

@@ -13,6 +13,7 @@ public class TestObject {
     int id;
     String name;
     List<String> likeList;
+    List<Integer> numberList;
 
     @Override
     public String toString() {
@@ -20,6 +21,7 @@ public class TestObject {
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", likeList=" + likeList +
+                ", numberList=" + numberList +
                 '}';
     }
 }
