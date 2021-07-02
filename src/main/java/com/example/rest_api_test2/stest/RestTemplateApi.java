@@ -23,6 +23,9 @@ public class RestTemplateApi {
         params.add("one", "test1");
 
         ResponseEntity<String> response = restTemplate.getForEntity(url + "/{one}", String.class, params);
+        log.info("header : {}", response.getHeaders());
+        log.info("status : {}", response.getStatusCode());
+        log.info("body : {}", response.getBody());
         return response.getBody();
     }
 
