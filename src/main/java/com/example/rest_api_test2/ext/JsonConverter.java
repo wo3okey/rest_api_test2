@@ -5,11 +5,13 @@ import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 import com.google.gson.reflect.TypeToken;
+import lombok.extern.slf4j.Slf4j;
 
 import java.lang.reflect.Type;
 import java.util.List;
 import java.util.Map;
 
+@Slf4j
 public class JsonConverter {
     /**
      * getStrJsonData
@@ -48,8 +50,8 @@ public class JsonConverter {
     public static <K, V> Map<K, V> strJsonToMap(String jsonData) {
         Gson gson = new Gson();
 
-        Type empMapType = new TypeToken<Map<K, V>>() {}.getType();
-        return gson.fromJson(jsonData, empMapType);
+        Type type = new TypeToken<Map<K, V>>() {}.getType();
+        return gson.fromJson(jsonData, type);
     }
 
     /**

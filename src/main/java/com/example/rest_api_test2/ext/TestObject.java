@@ -12,14 +12,14 @@ import java.util.List;
 public class TestObject {
     int id;
     String name;
-    List<String> list;
+    List<String> likeList;
 
     @Override
     public String toString() {
         return "TestObject{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
-                ", likeList=" + list +
+                ", likeList=" + likeList +
                 '}';
     }
 }
